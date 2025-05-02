@@ -3,6 +3,8 @@ import Button from "../../Common/Button";
 import "./styles.css";
 import backgroundImage from "../../../assets/1.jpeg";
 import overlayImage from "../../../assets/2.jpeg";
+import aImage from "../../../assets/a.avif";
+import bImage from "../../../assets/b.avif";
 import { motion } from "framer-motion";
 import { RWebShare } from "react-web-share";
 import { toast } from "react-toastify";
@@ -68,11 +70,25 @@ function MainComponent() {
       <div className="gradient-div">
         <img src={backgroundImage} className="gradient" alt="background" />
         <motion.img
-          src={overlayImage}
+          src={bImage}
           className="iphone"
           alt="overlay"
+          style={{ display: 'block', width: '220px', borderRadius: '16px 16px 0 0', margin: '0 auto', boxShadow: '0 4px 16px rgba(0,0,0,0.08)' }}
           initial={{ y: -10 }}
           animate={{ y: 10 }}
+          transition={{
+            type: "smooth",
+            repeatType: "mirror",
+            duration: 2,
+            repeat: Infinity,
+          }}
+        />
+        <motion.img
+          src={aImage}
+          alt="IPO Visual A"
+          style={{ display: 'block', width: '220px', borderRadius: '0 0 16px 16px', margin: '0 auto', boxShadow: '0 4px 16px rgba(0,0,0,0.08)' }}
+          initial={{ y: 10 }}
+          animate={{ y: -10 }}
           transition={{
             type: "smooth",
             repeatType: "mirror",

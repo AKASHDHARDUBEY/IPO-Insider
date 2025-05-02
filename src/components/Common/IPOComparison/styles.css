@@ -1,0 +1,145 @@
+.ipo-comparison-container {
+  position: relative;
+}
+
+.ipo-comparison-button {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.ipo-comparison-button:hover {
+  background-color: #2a6fd1;
+}
+
+.ipo-comparison-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ipo-comparison-content {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow: auto;
+  position: relative;
+  color: var(--black);
+}
+
+.ipo-comparison-content h2 {
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.ipo-comparison-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.ipo-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: var(--black);
+}
+
+.ipo-comparison-table th,
+.ipo-comparison-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--grey);
+  color: var(--black);
+}
+
+.ipo-comparison-table th {
+  background-color: var(--lightGrey);
+  font-weight: 600;
+  color: var(--black);
+}
+
+.ipo-comparison-table tr:hover {
+  background-color: var(--lightGrey);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--grey);
+}
+
+.close-button:hover {
+  color: var(--black);
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .ipo-comparison-content {
+  background-color: var(--darkGrey);
+  color: var(--white);
+}
+
+[data-theme="dark"] .ipo-comparison-content h2 {
+  color: var(--white);
+}
+
+[data-theme="dark"] .ipo-comparison-table {
+  color: var(--white);
+}
+
+[data-theme="dark"] .ipo-comparison-table th,
+[data-theme="dark"] .ipo-comparison-table td {
+  color: var(--white);
+  border-bottom: 1px solid var(--darkGrey);
+}
+
+[data-theme="dark"] .ipo-comparison-table th {
+  background-color: var(--darkGrey);
+  color: var(--white);
+}
+
+[data-theme="dark"] .ipo-comparison-table tr:hover {
+  background-color: var(--darkGrey);
+}
+
+[data-theme="dark"] .close-button {
+  color: var(--white);
+}
+
+[data-theme="dark"] .close-button:hover {
+  color: var(--blue);
+}
+
+@media (max-width: 768px) {
+  .ipo-comparison-content {
+    max-width: 95%;
+    padding: 10px;
+  }
+  
+  .ipo-comparison-table {
+    font-size: 12px;
+  }
+  
+  .ipo-comparison-table th,
+  .ipo-comparison-table td {
+    padding: 6px 8px;
+  }
+} 
