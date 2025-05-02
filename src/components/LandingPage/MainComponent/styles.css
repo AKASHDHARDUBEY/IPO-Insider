@@ -1,0 +1,111 @@
+.main-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 3rem;
+  min-height: 100vh;
+}
+
+.info-landing {
+  flex: 1;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.heading1 {
+  font-size: 6rem;
+  margin: 0;
+  color: var(--white);
+}
+
+.heading2 {
+  font-size: 6rem;
+  margin: 0;
+  color: var(--blue);
+}
+
+.info-text {
+  font-size: 1.2rem;
+  color: var(--grey);
+  padding-bottom: 1rem;
+}
+
+.btn-flex {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.gradient-div {
+  position: relative;
+  flex: 0.8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.gradient {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  z-index: -1;
+}
+
+.iphone {
+  position: relative;
+  right: 0;
+  width: 50%;
+  z-index: 100;
+}
+
+@media screen and (max-width: 1250px) {
+  .heading1,
+  .heading2 {
+    font-size: 4rem;
+  }
+
+  .iphone {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .heading1,
+  .heading2 {
+    font-size: 3rem;
+  }
+
+  .iphone {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-flex {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .info-landing {
+    text-align: center;
+  }
+
+  .btn-flex {
+    justify-content: center;
+  }
+
+  .gradient-div {
+    display: none;
+  }
+
+  .info-text {
+    text-align: center;
+  }
+}
+
+/* 
+clamp(minFontSize, ratio, maxFontSize)
+  formula to calculate the ratio
+  (max-size/design width) * 100
+  example: (70/1440)*100 */

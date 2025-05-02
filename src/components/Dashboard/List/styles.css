@@ -1,0 +1,168 @@
+.list-flex {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.list-row {
+  border-bottom: 1px solid var(--grey);
+  transition: background-color 0.3s ease;
+}
+
+.list-row:hover {
+  background-color: var(--bg-secondary);
+}
+
+.list-flex td {
+  padding: 1rem;
+  text-align: left;
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.listing-date {
+  white-space: nowrap;
+  color: var(--grey) !important;
+}
+
+.company-info {
+  min-width: 300px;
+}
+
+.company-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.company-name {
+  font-weight: 500;
+}
+
+.company-symbol {
+  color: var(--grey);
+}
+
+.ipo-type {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.ipo-type.mainline {
+  background-color: var(--blue);
+  color: white;
+}
+
+.ipo-type.sme {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.exchange {
+  color: var(--grey) !important;
+}
+
+.ipo-value {
+  color: var(--blue) !important;
+}
+
+.price-range {
+  white-space: nowrap;
+}
+
+.last-price {
+  color: var(--grey) !important;
+}
+
+.actions {
+  width: 120px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.calendar-button,
+.reminder-button,
+.watchlist-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  color: var(--grey);
+}
+
+.calendar-button:hover,
+.reminder-button:hover,
+.watchlist-button:hover {
+  background-color: var(--bg-secondary);
+  color: var(--white);
+}
+
+.calendar-button svg,
+.reminder-button svg,
+.watchlist-button svg {
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .company-info {
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .list-flex {
+    display: block;
+  }
+
+  .list-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+  }
+
+  .list-flex td {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .list-flex td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+
+  .company-info {
+    min-width: unset;
+  }
+
+  .company-name-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .action-buttons {
+    justify-content: flex-start;
+  }
+}

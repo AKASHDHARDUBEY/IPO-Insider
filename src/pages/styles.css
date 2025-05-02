@@ -1,0 +1,216 @@
+.ipo-details-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ipo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ipo-title h1 {
+  color: var(--white);
+  margin: 0;
+  font-size: 2rem;
+}
+
+.ipo-symbol {
+  color: var(--grey);
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.calendar-button,
+.reminder-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.calendar-button {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.reminder-button {
+  background-color: var(--bg-primary);
+  color: var(--white);
+}
+
+.calendar-button:hover,
+.reminder-button:hover {
+  transform: scale(1.05);
+}
+
+.ipo-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background-color: var(--bg-secondary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.info-card h3 {
+  color: var(--white);
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.info-item .label {
+  color: var(--grey);
+}
+
+.info-item .value {
+  color: var(--white);
+  font-weight: 500;
+}
+
+.company-background {
+  background-color: var(--bg-secondary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.company-background h3 {
+  color: var(--white);
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.company-background p {
+  color: var(--grey);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.post-listing-performance {
+  background-color: var(--bg-secondary);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.post-listing-performance h3 {
+  color: var(--white);
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.performance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.performance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  border-radius: 0.5rem;
+}
+
+.performance-item .label {
+  color: var(--grey);
+}
+
+.performance-item .value {
+  color: var(--white);
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .ipo-details-container {
+    padding: 1rem;
+  }
+
+  .ipo-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .ipo-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .action-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .ipo-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq-section {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  background-color: var(--darkgrey);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.faq-section h2 {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.faq-item {
+  background-color: var(--grey);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--green);
+}
+
+.faq-item h3 {
+  color: var(--green);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.faq-item p {
+  color: var(--white);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.faq-item p:last-child {
+  margin-bottom: 0;
+} 

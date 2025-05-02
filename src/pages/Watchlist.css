@@ -1,0 +1,42 @@
+.watchlist-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.empty-watchlist {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.empty-watchlist h1 {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.empty-watchlist p {
+  color: var(--grey);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.watchlist-action {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .watchlist-container {
+    padding: 1rem;
+  }
+
+  .empty-watchlist h1 {
+    font-size: 1.5rem;
+  }
+
+  .empty-watchlist p {
+    font-size: 1rem;
+  }
+} 
