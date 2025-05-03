@@ -9,6 +9,7 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { saveItemToWatchlist } from "../../../functions/saveItemToWatchlist";
 import { removeItemToWatchlist } from "../../../functions/removeItemToWatchlist";
+import { addToCalendar } from "../../../functions/addToCalendar";
 
 function Grid({ ipo, delay }) {
   const watchlist = JSON.parse(localStorage.getItem("watchlist"));
@@ -16,12 +17,13 @@ function Grid({ ipo, delay }) {
 
   const handleAddToCalendar = (e) => {
     e.preventDefault();
-    // Implement calendar integration
-    console.log("Add to calendar:", ipo);
+    e.stopPropagation();
+    addToCalendar(ipo);
   };
 
   const handleSetReminder = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     // Implement reminder functionality
     console.log("Set reminder for:", ipo);
   };
@@ -43,6 +45,8 @@ function Grid({ ipo, delay }) {
             <div
               className="watchlist-icon"
               onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 if (isIpoAdded) {
                   removeItemToWatchlist(e, ipo.id, setIsIpoAdded);
                 } else {
