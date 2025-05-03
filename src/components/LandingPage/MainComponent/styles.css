@@ -109,3 +109,41 @@ clamp(minFontSize, ratio, maxFontSize)
   formula to calculate the ratio
   (max-size/design width) * 100
   example: (70/1440)*100 */
+
+.widgets-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.ticker-tape {
+  width: 100%;
+  height: 46px;
+  background-color: #121212;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.advanced-chart {
+  width: 100%;
+  height: 500px;
+  background-color: #121212;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tradingview-widget-container {
+  width: 100%;
+  height: 100%;
+}
+
+.tradingview-widget-container__widget {
+  width: 100%;
+  height: 100%;
+}
+
+.tradingview-widget-copyright {
+  display: none;
+}
